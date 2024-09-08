@@ -5,4 +5,10 @@ declare global {
       thisArg?: any
     ): T[];
   }
+  interface Array<T> {
+    customMap<U>(
+      callbackFn: (value: T, index: number, array: Array<T>) => U,
+      thisArg?: any
+    ): Array<U>;
+  }
 }
